@@ -4,12 +4,12 @@
 /**
  * main - Entry point, Print to stderr without fprintf or fputs
  *
- * Return: Always 0 (Success)
+ * Return: Always 1 (Error)
  */
 int main(void)
 {
 	const char *str = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
 	fwrite(str, sizeof(*str), strlen(str), stderr);
-	return (0);
+	return (1);
 }
