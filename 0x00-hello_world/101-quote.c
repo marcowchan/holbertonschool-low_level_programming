@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * main - Entry point, Print to stderr without fprintf or fputs
+ * main - Entry point, Print to stderr
  *
  * Return: Always 1 (Error)
  */
