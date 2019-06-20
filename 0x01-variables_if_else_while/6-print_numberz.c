@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
- * main - print the digits of base 10 with only putchar
+ * main - print the digits of base 10
  * Return: Always 0 (Success)
  */
 int main(void)
