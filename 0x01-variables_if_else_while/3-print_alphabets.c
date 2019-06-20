@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
- * main - print the alphabet
+ * main - print the alphabet in upper and lower case
  * Return: Always 0 (Success)
  */
 int main(void)
