@@ -9,11 +9,11 @@
 void printSign(int number)
 {
 	if (number > 0)
-		printf("%i is positive\n", n);
+		printf("%i is positive\n", number);
 	else if (number == 0)
-		printf("%i is zero\n", n);
+		printf("%i is zero\n", number);
 	else
-		printf("%i is negative\n", n);
+		printf("%i is negative\n", number);
 }
 
 /**
