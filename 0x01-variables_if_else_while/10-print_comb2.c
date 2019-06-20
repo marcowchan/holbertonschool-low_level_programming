@@ -9,7 +9,7 @@ int main(void)
 	int count;
 	int firstDigit;
 	int secondDigit;
-	
+
 	for (count = 0; count < 100; count++)
 	{
 		firstDigit = count / 10;
@@ -21,7 +21,7 @@ int main(void)
 		{
 			putchar(',');
 			putchar(' ');
-		}	
+		}
 	}
 	putchar('\n');
 	return (0);
