@@ -9,14 +9,12 @@ int main(void)
 	int first;
 	int second;
 	int third;
-	int sOffset = 0;
-	int tOffset = 0;
 
 	for (first = '0'; first <= '9'; first++)
 	{
 		for (second = first + 1; second <= '9'; second++)
 		{
-			for (third = second + tOffset; third <= '9'; third++)
+			for (third = second; third <= '9'; third++)
 			{
 				if (first == second || second == third || first == third)
 					continue;
