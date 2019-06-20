@@ -5,7 +5,7 @@
 /**
  * printSign - Print the sign of a given integer
  * @number: integer to be tested
-*/
+ */
 void printSign(int number)
 {
 	if (number > 0)
@@ -19,7 +19,7 @@ void printSign(int number)
 /**
  * main - Generate random number
  * Return: Always 0 (Success)
-*/
+ */
 int main(void)
 {
 	int n;

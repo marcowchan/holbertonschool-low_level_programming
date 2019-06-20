@@ -6,7 +6,7 @@
  * printLastDigit - print whether or not the last digit
  * is greater than 5 or less than 6 or zero
  * @n: the integer to be displayed along with its last digit
-*/
+ */
 void printLastDigit(int n)
 {
 	int lastDigit = n % 10;
@@ -23,7 +23,7 @@ void printLastDigit(int n)
  * main - Randomly print positive, negative, or zero
  *
  * Return: Always 0 (Success)
-*/
+ */
 int main(void)
 {
 	int n;
