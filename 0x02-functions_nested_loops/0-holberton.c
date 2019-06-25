@@ -2,7 +2,7 @@
 
 /**
  * main - print Holberton
- * Return: On success 1
+ * Return: On success 0
  */
 int main(void)
 {
@@ -13,4 +13,5 @@ int main(void)
 	{
 		_putchar(*(c + i));
 	}
+	return (0);
 }
