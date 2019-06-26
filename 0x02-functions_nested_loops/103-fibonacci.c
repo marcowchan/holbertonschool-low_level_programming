@@ -6,10 +6,10 @@
  */
 int main(void)
 {
-	unsigned long long int a = 0;
-	unsigned long long int b = 1;
-	unsigned long long cur;
-	unsigned long long sum = 0;
+	unsigned long int a = 0;
+	unsigned long int b = 1;
+	unsigned long cur;
+	unsigned long sum = 0;
 	int i;
 
 	for (i = 0; i < 50; i++)
@@ -22,7 +22,7 @@ int main(void)
 		a = b;
 		b = cur;
 	}
-	printf("%llu", sum);
+	printf("%lu", sum);
 	putchar('\n');
 	return (0);
 }
