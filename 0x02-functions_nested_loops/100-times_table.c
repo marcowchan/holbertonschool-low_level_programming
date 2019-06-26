@@ -6,13 +6,13 @@
  */
 void print_times_table(int n)
 {
-	if (n > 15 || n < 0)
-		return;
 
 	int first;
 	int second;
 	int product = 0;
 
+	if (n > 15 || n < 0)
+		return;
 	for (first = 0; first <= n; first++)
 	{
 		for (second = 0; second <= n; second++)
