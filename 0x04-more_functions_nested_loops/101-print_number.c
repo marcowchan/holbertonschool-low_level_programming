@@ -13,7 +13,8 @@ void print_number(int n)
 		_putchar('-');
 		lastDigit = n % 10 * -1;
 		n = n / -10;
-		print_number(n);
+		if (n > 0)
+			print_number(n);
 		_putchar('0' + lastDigit);
 	}
 	else if (n < 10)
