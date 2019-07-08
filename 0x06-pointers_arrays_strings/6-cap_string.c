@@ -8,7 +8,7 @@ char *cap_string(char *s)
 	char *r = s;
 	int i;
 	char a[] = " \t\n,.!?\"(){}";
-	int capitalize = 1;
+	int cap = 1;
 
 	while (*s)
 	{
