@@ -11,6 +11,8 @@ char *rot13(char *s)
 	{
 		if (*s >= 'a' && *s <= 'z')
 			*s = (*s - 'a' + 13) % 26 + 'a';
+		else if (*s >= 'A' && *s <= 'Z')
+			*s = (*s - 'A' + 13) % 26 + 'A';
 		s++;
 	}
 	return (r);
