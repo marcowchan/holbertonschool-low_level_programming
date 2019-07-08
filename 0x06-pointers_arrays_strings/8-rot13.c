@@ -5,14 +5,13 @@
  */
 char *rot13(char *s)
 {
-	char *r = s;
+	char offset, *r = s;
 
 	while (*s)
 	{
-		if (*s >= 'a' && *s <= 'z')
-			*s = (*s - 'a' + 13) % 26 + 'a';
-		else if (*s >= 'A' && *s <= 'Z')
-			*s = (*s - 'A' + 13) % 26 + 'A';
+		offset = (*s & 32) + 65;
+		if ((*s >= 'a' && *s <= 'z') || (*s >= 'A' && *s <= 'Z'))
+			*s = (*s - offset + 13) % 26 + offset;
 		s++;
 	}
 	return (r);
