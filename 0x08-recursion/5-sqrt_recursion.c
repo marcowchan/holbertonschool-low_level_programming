@@ -13,7 +13,7 @@ int recurse(int n, int i)
 	else if (n / i == i && (n % i == 0))
 		return (i);
 	else if (i < n)
-		return recurse(n, i + 1);
+		return (recurse(n, i + 1));
 	return (-1);
 }
 
