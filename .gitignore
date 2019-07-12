@@ -1,4 +1,11 @@
+# macOS
 .DS_Store
-_putchar.c
 a.out
+
+# ignore C test source files
 main.c
+_putchar.c
+
+# ignore files for static library assignment
+/0x09-static_libraries/*.c
+/0x09-static_libraries/*.o
