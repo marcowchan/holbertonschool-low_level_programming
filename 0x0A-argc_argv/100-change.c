@@ -17,9 +17,20 @@ int main(int argc, char *argv[])
 		puts("Error");
 		return (1);
 	}
+	for (i = 0; argv[1][i]; i++)
+	{
+		if ((argv[1][i] < '0' || argv[1][i] > '9') && !(argv[1][i] == '-' && i == 0))
+		{
+			puts("Error");
+			return (1);
+		}
+	}
 	cents = atoi(argv[1]);
 	if (cents < 1)
-		putchar('0');
+	{
+		puts("0");
+		return (0);
+	}
 	while (cents > 0)
 	{
 		for (i = 0; i < 5; i++)
