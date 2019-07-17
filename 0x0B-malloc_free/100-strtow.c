@@ -34,9 +34,11 @@ char **strtow(char *str)
 	int i, r = 0, words;
 	char **p;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL)
 		return (NULL);
 	words = wordcount(str);
+	if (!words)
+		return (NULL);
 	p = malloc((words + 1) * sizeof(*p));
 	if (p == NULL)
 		return (NULL);
