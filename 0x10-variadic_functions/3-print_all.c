@@ -10,6 +10,11 @@ int countValid(const char *s)
 {
 	int i = 0, count = 0;
 
+	if (!format)
+	{
+		printf("\n");
+		exit(0);
+	}
 	while (s[i])
 	{
 		switch (s[i])
