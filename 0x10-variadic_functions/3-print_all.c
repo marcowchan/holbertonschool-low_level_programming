@@ -10,11 +10,6 @@ int countValid(const char *s)
 {
 	int i = 0, count = 0;
 
-	if (!format)
-	{
-		printf("\n");
-		exit(0);
-	}
 	while (s[i])
 	{
 		switch (s[i])
@@ -42,7 +37,7 @@ void print_all(const char * const format, ...)
 
 	va_start(params, format);
 	count = countValid(format);
-	while (format[i])
+	while (format && format[i])
 	{
 		f = 0;
 		switch (format[i])
