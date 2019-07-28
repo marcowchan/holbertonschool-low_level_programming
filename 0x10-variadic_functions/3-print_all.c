@@ -2,73 +2,45 @@
 #include <stdio.h>
 
 /**
- * countValid - count number of valid characters
- * @s: string to check characters
- * Return: sum of valid characters
- */
-int countValid(const char *s)
-{
-	int i = 0, count = 0;
-
-	while (s[i])
-	{
-		switch (s[i])
-		{
-			case 'c':
-			case 'i':
-			case 'f':
-			case 's':
-				count++;
-		}
-		i++;
-	}
-	return (count);
-}
-
-/**
  * print_all - print all char, int, float, and string parameters
  * @format: contains data types of parameters in order
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0, count = 0, f;
+	unsigned int i = 0;
 	va_list params;
-	char *s;
+	char *s, *sep = "";
 
-	va_start(params, format);
-	count = countValid(format);
-	while (format && format[i])
+	if (format)
 	{
-		f = 0;
-		switch (format[i])
+		va_start(params, format);
+		while (format[i])
 		{
-			case 'c':
-				printf("%c", va_arg(params, int));
-				count--;
-				f = 1;
-				break;
-			case 'i':
-				printf("%d", va_arg(params, int));
-				count--;
-				f = 1;
-				break;
-			case 'f':
-				printf("%f", va_arg(params, double));
-				count--;
-				f = 1;
-				break;
-			case 's':
-				s = va_arg(params, char *);
-				count--;
-				f = 1;
-				if (!s)
-					s = "(nil)";
-				printf("%s", s);
+			switch (format[i])
+			{
+				case 'c':
+					printf("%s%c", sep, va_arg(params, int));
+					break;
+				case 'i':
+					printf("%s%d", sep, va_arg(params, int));
+					break;
+				case 'f':
+					printf("%s%f", sep, va_arg(params, double));
+					break;
+				case 's':
+					s = va_arg(params, char *);
+					if (!s)
+						s = "(nil)";
+					printf("%s%s", sep, s);
+					break;
+				default:
+					i++;
+					continue;
+			}
+			sep = ", ";
+			i++;
 		}
-		if (f && count)
-			printf(", ");
-		i++;
+		va_end(params);
 	}
-	va_end(params);
 	printf("\n");
 }
