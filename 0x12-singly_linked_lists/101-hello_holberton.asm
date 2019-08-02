@@ -6,10 +6,10 @@ section .text
 	global	main
 
 main:
-	mov	edi, msg
-	mov	eax, 0
+	mov	rdi, msg
+	mov	rax, 0
 	call	printf
 
-	mov	ebx, 0
-	mov	eax, 1
+	mov	rbx, 0
+	mov	rax, 1
 	ret
