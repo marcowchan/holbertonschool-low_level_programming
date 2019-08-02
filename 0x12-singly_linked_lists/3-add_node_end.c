@@ -12,12 +12,12 @@ list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node, *end;
 	unsigned int i = 0;
-	
+
 	new_node = malloc(sizeof(list_t));
 	if (!new_node)
 		return (NULL);
 	for (; str && str[i]; i++)
-			;
+		;
 	if (*head)
 	{
 		end = *head;
