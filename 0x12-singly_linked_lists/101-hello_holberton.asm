@@ -6,10 +6,11 @@ section .text
 	global	main
 
 main:
+	push	rbp
 	mov	rdi, msg
 	mov	rax, 0
 	call	printf
 
-	mov	rbx, 0
+	pop	rbp
 	mov	rax, 1
 	ret
