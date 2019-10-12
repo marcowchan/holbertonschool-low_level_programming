@@ -6,7 +6,7 @@
  * @ht: hash table to add key-value pair to
  * @key: key to add
  * @value: value to add
- * Return: Success(0), Error(1)
+ * Return: Success(1), Error(0)
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
@@ -15,12 +15,21 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (key == NULL || strcmp(key, "") == 0)
 		return (0);
+	index = key_index((const unsigned char *)key, ht->size);
+	for (tuple = ht->array[index]; tuple != NULL; tuple = tuple->next)
+	{
+		if (strcmp(tuple->key, key) == 0)
+		{
+			free(tuple->value);
+			tuple->value = strdup(value);
+			return (1);
+		}
+	}
 	tuple = malloc(sizeof(*tuple));
 	if (tuple == NULL)
 		return (0);
 	tuple->key = strdup(key);
 	tuple->value = strdup(value);
-	index = key_index((const unsigned char *)key, ht->size);
 	tuple->next = ht->array[index];
 	ht->array[index] = tuple;
 	return (1);
