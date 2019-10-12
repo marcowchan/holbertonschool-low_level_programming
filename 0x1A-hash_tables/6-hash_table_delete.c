@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_print - deallocates a hash table
+ * hash_table_delete - deallocates a hash table
  * @ht: hash table to deallocate
  */
 void hash_table_delete(hash_table_t *ht)
