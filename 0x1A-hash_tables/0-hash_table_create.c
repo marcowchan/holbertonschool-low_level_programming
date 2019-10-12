@@ -20,7 +20,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	if (table->array == NULL)
 	{
 		free(table);
-		return(NULL);
+		return (NULL);
 	}
 	for (i = 0; i < size; i++)
 		table->array[i] == NULL;
