@@ -18,7 +18,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	tuple = malloc(sizeof(*tuple));
 	if (tuple == NULL)
 		return (0);
-	tuple->key = (char *)key;
+	tuple->key = strdup(key);
 	tuple->value = strdup(value);
 	index = key_index((const unsigned char *)key, ht->size);
 	tuple->next = ht->array[index];
