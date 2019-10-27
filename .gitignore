@@ -9,3 +9,7 @@ _putchar.c
 # ignore files for static library assignment
 /0x09-static_libraries/*.c
 /0x09-static_libraries/*.o
+
+# ignore helper functions
+0x1B-sorting_algorithms/print_list.c
+0x1B-sorting_algorithms/print_array.c
