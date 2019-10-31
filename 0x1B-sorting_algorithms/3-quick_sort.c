@@ -53,7 +53,7 @@ void qs(int arr[], int low, int high, size_t size)
 }
 
 /**
- * quick_sort - sorts an array of integers in ascending order using
+ * quick_sort - quick sorts an array of integers
  * the Quick sort algorithm
  * @array: input array
  * @size: length of array
