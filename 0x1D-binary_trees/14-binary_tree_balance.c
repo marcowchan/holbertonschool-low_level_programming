@@ -45,15 +45,16 @@ int recurse(const binary_tree_t *tree)
 }
 
 /**
- * binary_tree_height - Measures the height of a binary tree.
+ * this_binary_tree_height - Measures the height of a binary tree.
  * @tree: The pointer to the root node of the tree to measure the height.
+ * @rootval: The value of the root head.
  * Return: The height of a binary tree.
  */
 int this_binary_tree_height(const binary_tree_t *tree, int rootval)
 {
 	int depth;
 
-	for (depth = 0; tree && tree->n && tree->n != rootval; tree = tree->parent, depth++)
+	for (depth = 0; tree && tree->n != rootval; tree = tree->parent, depth++)
 		;
 	return (recurse(tree) - 1 - depth);
 }

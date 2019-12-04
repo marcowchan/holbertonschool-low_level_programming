@@ -8,7 +8,7 @@
  */
 int search(const binary_tree_t *tree, const binary_tree_t *target)
 {
-	if(!tree)
+	if (!tree)
 		return (0);
 	if (tree->n == target->n)
 		return (1);
@@ -23,7 +23,8 @@ int search(const binary_tree_t *tree, const binary_tree_t *target)
  * @second: The pointer to the second node.
  * Return: The pointer to the lowest common ancestor or (NULL).
  */
-binary_tree_t *binary_trees_ancestor(const binary_tree_t *first, const binary_tree_t *second)
+binary_tree_t *binary_trees_ancestor(
+	const binary_tree_t *first, const binary_tree_t *second)
 {
 	binary_tree_t *lowest = (binary_tree_t *)first;
 
