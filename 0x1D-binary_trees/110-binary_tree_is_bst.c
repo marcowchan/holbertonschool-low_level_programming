@@ -27,7 +27,6 @@ void tree_inorder(
 	list_node = malloc(sizeof(*list_node));
 	if (!list_node)
 		return;
-	printf("MALLOC %d\n", tree->n);
 	list_node->tree = tree;
 	list_node->next = NULL;
 	tree_inorder(tree->left, head, end);
