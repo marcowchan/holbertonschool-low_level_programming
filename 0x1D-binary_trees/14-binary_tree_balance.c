@@ -16,13 +16,11 @@ int binary_tree_balance(const binary_tree_t *tree)
 	{
 		l_height = this_binary_tree_height(tree->left, tree->left->n);
 		l_height++;
-		printf("L %d, ", l_height);
 	}
 	if (tree->right)
 	{
 		r_height = this_binary_tree_height(tree->right, tree->right->n);
 		r_height++;
-		printf("R %d\n", r_height);
 	}
 	return (l_height - r_height);
 }
