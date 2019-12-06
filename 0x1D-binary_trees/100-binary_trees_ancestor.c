@@ -12,8 +12,6 @@ int search(const binary_tree_t *tree, const binary_tree_t *target)
 		return (0);
 	if (tree->n == target->n)
 		return (1);
-	search(tree->left, target);
-	search(tree->right, target);
 	return (search(tree->left, target) + search(tree->right, target));
 }
 
