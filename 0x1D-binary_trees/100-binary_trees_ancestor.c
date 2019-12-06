@@ -26,8 +26,11 @@ int search(const binary_tree_t *tree, const binary_tree_t *target)
 binary_tree_t *binary_trees_ancestor(
 	const binary_tree_t *first, const binary_tree_t *second)
 {
-	binary_tree_t *lowest = (binary_tree_t *)first;
+	binary_tree_t *lowest;
 
+	if (!first || !second)
+		return (NULL);
+	lowest = (binary_tree_t *)first;
 	while (lowest)
 	{
 		if (search(lowest, second))
