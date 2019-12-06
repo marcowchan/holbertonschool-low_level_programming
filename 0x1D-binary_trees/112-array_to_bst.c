@@ -24,7 +24,7 @@ bst_t *array_to_bst(int *array, size_t size)
 	bst_t *root = NULL;
 	size_t i;
 
-	for (i = 0; i < size; i++)
+	for (i = 0; array && i < size; i++)
 	{
 		if (!bst_insert(&root, array[i]))
 		{
