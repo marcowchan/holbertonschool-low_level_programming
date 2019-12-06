@@ -5,15 +5,15 @@
 /**
  * minValueNode - Gets the smallest node in the stree.
  * @root: The pointer to the root node.
- * @value: The value to remove in the tree.
- * Return: The pointer to the new root node of the tree.
+ * Return: The pointer to the smallest node of the tree.
  */
-bst_t *minValueNode(bst_t *node)
+bst_t *minValueNode(bst_t *root)
 {
-    bst_t *current = node;
-    while (current && current->left != NULL)
-        current = current->left;
-    return current;
+	bst_t *current = root;
+
+	while (current && current->left != NULL)
+		current = current->left;
+	return (current);
 }
 
 /**
