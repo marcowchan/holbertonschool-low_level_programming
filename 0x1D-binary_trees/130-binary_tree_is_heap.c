@@ -54,10 +54,9 @@ int isHeapUtil(const binary_tree_t *tree)
  */
 int binary_tree_is_heap(const binary_tree_t *tree)
 {
-	unsigned int node_count = countNodes(tree);
-	unsigned int index = 0;
-
-	if (isCompleteUtil(tree, index, node_count) && isHeapUtil(tree))
+	if (!tree)
+		return (0);
+	if (isCompleteUtil(tree, 0, countNodes(tree)) && isHeapUtil(tree))
 		return (1);
 	return (0);
 }
